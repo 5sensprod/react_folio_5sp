@@ -1,5 +1,11 @@
+import { SearchBar } from './forms/SearchBar'
+
 function App() {
-  return <h1> Bonjour</h1>
+  return (
+    <div className="container my-3">
+      <SearchBar />
+    </div>
+  )
 }
 
 export default App

@@ -18,6 +18,6 @@ Ce portfolio est une démonstration de mes compétences en développement React,
 - Animations fluides: L'ajout, la suppression ou le changement de position des produits déclenche une animation fluide pour une meilleure expérience utilisateur.
 - Design responsive: L'application est entièrement responsive, ce qui la rend compatible avec tous les appareils, des ordinateurs de bureau aux mobiles.
 
-## 📸 Aperçu du projet
+## 📸 Aperçu du projet - [Voir le projet en action ici](https://5sensprod.github.io/react_folio_5sp/)
 
-##💡 Feedback
+## 💡 Feedback

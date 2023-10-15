@@ -11,7 +11,7 @@
 
 export function Checkbox({ checked, onChange, label, id }) {
   return (
-    <div className="form-check">
+    <div className="form-check my-2">
       <input
         id={id}
         type="checkbox"

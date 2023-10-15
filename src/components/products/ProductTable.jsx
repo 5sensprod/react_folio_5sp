@@ -1,3 +1,4 @@
+import { AnimatePresence } from 'framer-motion'
 import { ProductCategoryRow } from './ProductCategoryRow'
 import { ProductRow } from './ProductRow'
 
@@ -13,15 +14,12 @@ export function ProductTable({ products }) {
   let lastCategory = null
 
   products.forEach((product) => {
-    // Si la catégorie du produit change, ajoutez une nouvelle ligne de catégorie.
     if (product.category !== lastCategory) {
       rows.push(
         <ProductCategoryRow key={product.category} name={product.category} />,
       )
       lastCategory = product.category
     }
-
-    // Ajoutez une nouvelle ligne de produit pour chaque produit.
     rows.push(<ProductRow key={product.name} product={product} />)
   })
 
@@ -33,7 +31,9 @@ export function ProductTable({ products }) {
           <th>Prix</th>
         </tr>
       </thead>
-      <tbody>{rows}</tbody>
+      <tbody>
+        <AnimatePresence>{rows}</AnimatePresence>
+      </tbody>
     </table>
   )
 }

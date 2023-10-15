@@ -3,6 +3,7 @@ import { PRODUCTS } from '../data/product'
 import { SearchBar } from './forms/SearchBar'
 import { ProductTable } from './products/ProductTable'
 import { removeAccents } from '../utils/stringHelpers'
+import { PageTitle } from './common/PageTitle'
 
 function App() {
   const [showStockedOnly, setShowStockedOnly] = useState(false)
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <div className="container my-3">
+      <PageTitle />
       <SearchBar
         search={search}
         onSearchChange={setSearch}

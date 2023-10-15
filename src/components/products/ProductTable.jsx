@@ -26,7 +26,7 @@ export function ProductTable({ products }) {
   })
 
   return (
-    <table className="table table-hover table-responsive">
+    <table className="table table-hover table-responsive border rounded">
       <thead>
         <tr>
           <th>Nom</th>

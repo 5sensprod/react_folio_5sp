@@ -1,15 +1,24 @@
 import { Checkbox } from './Checkbox'
 import { Input } from './Inputs'
 
-export function SearchBar() {
+export function SearchBar({
+  showStockedOnly,
+  onStockedOnlyChange,
+  search,
+  onSearchChange,
+}) {
   return (
     <div>
       <div className="mb-3">
-        <Input value="" onChange={() => null} placeholder="Rechercher ..." />
+        <Input
+          value={search}
+          onChange={onSearchChange}
+          placeholder="Rechercher ..."
+        />
         <Checkbox
           id="stocked"
-          checked={false}
-          onChange={() => null}
+          checked={showStockedOnly}
+          onChange={onStockedOnlyChange}
           label="Afficher les produits en stock"
         />
       </div>

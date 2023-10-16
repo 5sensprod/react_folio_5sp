@@ -4,6 +4,7 @@ import { SearchBar } from './forms/SearchBar'
 import { ProductTable } from './products/ProductTable'
 import { removeAccents } from '../utils/stringHelpers'
 import { PageTitle } from './common/PageTitle'
+import Weather from './weather/Weather'
 
 function App() {
   const [showStockedOnly, setShowStockedOnly] = useState(false)
@@ -30,6 +31,7 @@ function App() {
         onStockedOnlyChange={setShowStockedOnly}
       />
       <ProductTable products={visibleProducts} />
+      <Weather />
     </div>
   )
 }

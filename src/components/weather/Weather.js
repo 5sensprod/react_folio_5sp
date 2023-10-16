@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { Input } from '../forms/Inputs'
-import { SubmitButton } from '../forms/SubmitButton'
+// import { Input } from '../forms/Inputs'
+// import { SubmitButton } from '../forms/SubmitButton'
 import 'bootstrap-icons/font/bootstrap-icons.css'
+import { SearchBar } from '../forms/SearchBar'
 
 function Weather() {
   const [query, setQuery] = useState('Paris') // Par défaut, on met Paris
@@ -25,15 +26,13 @@ function Weather() {
 
   return (
     <div>
-      <form onSubmit={fetchWeather}>
-        <Input
-          value={query}
-          placeholder="Entrer le nom de la ville..."
-          onChange={(value) => setQuery(value)}
-        />
-        <SubmitButton iconName="bi-search" onClick={fetchWeather} />
-      </form>
-
+      <SearchBar
+        search={query}
+        onSearchChange={(value) => setQuery(value)}
+        onSubmit={fetchWeather}
+        submitLabel="Rechercher"
+        iconName="bi-search"
+      />
       {weather && (
         <div>
           <h2>

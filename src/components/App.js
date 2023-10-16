@@ -1,10 +1,10 @@
 import React, { useState, useMemo } from 'react'
 import { PRODUCTS } from '../data/product'
-import { SearchBar } from './forms/SearchBar'
 import { ProductTable } from './products/ProductTable'
 import { removeAccents } from '../utils/stringHelpers'
 import { PageTitle } from './common/PageTitle'
 import Weather from './weather/Weather'
+import { ProductSearchBar } from './products/ProductSearchBar'
 
 function App() {
   const [showStockedOnly, setShowStockedOnly] = useState(false)
@@ -24,11 +24,12 @@ function App() {
   return (
     <div className="container my-3">
       <PageTitle />
-      <SearchBar
+      <ProductSearchBar
         search={search}
         onSearchChange={setSearch}
         showStockedOnly={showStockedOnly}
         onStockedOnlyChange={setShowStockedOnly}
+        useSubmitButton={false}
       />
       <ProductTable products={visibleProducts} />
       <Weather />

@@ -1,27 +1,28 @@
-import { Checkbox } from './Checkbox'
 import { Input } from './Inputs'
+import { SubmitButton } from './SubmitButton'
 
 export function SearchBar({
-  showStockedOnly,
-  onStockedOnlyChange,
   search,
   onSearchChange,
+  useSubmitButton = true,
+  submitLabel = 'Rechercher',
+  iconName,
+  onSubmit,
+  children,
 }) {
   return (
-    <div>
+    <form onSubmit={onSubmit}>
       <div className="mb-3">
         <Input
           value={search}
           onChange={onSearchChange}
           placeholder="Rechercher ..."
         />
-        <Checkbox
-          id="stocked"
-          checked={showStockedOnly}
-          onChange={onStockedOnlyChange}
-          label="Afficher les produits en stock"
-        />
+        {useSubmitButton && (
+          <SubmitButton label={submitLabel} iconName={iconName} />
+        )}
+        {children}
       </div>
-    </div>
+    </form>
   )
 }

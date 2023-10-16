@@ -6,17 +6,20 @@ import PropTypes from 'prop-types'
  * @param {(s: string) => void} onChange
  */
 
-export function Input({ placeholder, value, onChange }) {
+export function Input({
+  placeholder,
+  value,
+  onChange,
+  className = 'form-control',
+}) {
   return (
-    <div>
-      <input
-        type="text"
-        className="form-control"
-        value={value}
-        placeholder={placeholder}
-        onChange={(e) => onChange(e.target.value)}
-      />
-    </div>
+    <input
+      type="text"
+      className={className}
+      value={value}
+      placeholder={placeholder}
+      onChange={(e) => onChange(e.target.value)}
+    />
   )
 }
 

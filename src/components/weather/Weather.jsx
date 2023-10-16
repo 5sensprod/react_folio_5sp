@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { fetchWeatherData } from '../../api/openWeatherMap'
 import 'bootstrap-icons/font/bootstrap-icons.css'
-import { SearchBar } from '../forms/SearchBar'
+import { WeatherSearchBar } from './WeatherSearchBar'
 
 function Weather() {
   const [query, setQuery] = useState('Paris')
@@ -20,12 +20,10 @@ function Weather() {
 
   return (
     <div>
-      <SearchBar
+      <WeatherSearchBar
         search={query}
         onSearchChange={(value) => setQuery(value)}
         onSubmit={fetchWeather}
-        submitLabel="Rechercher"
-        iconName="bi-search"
       />
       {weather && (
         <div>

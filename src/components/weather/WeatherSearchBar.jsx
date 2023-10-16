@@ -1,16 +1,14 @@
-import { Checkbox } from '../forms/Checkbox'
 import { Input } from '../forms/Input'
 import { SubmitButton } from '../forms/SubmitButton'
 
-export function ProductSearchBar({
+export function WeatherSearchBar({
   search,
   onSearchChange,
-  showStockedOnly,
-  onStockedOnlyChange,
+  onSubmit,
   useSubmitButton = true,
 }) {
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       <div className="mb-3 input-group">
         <Input
           value={search}
@@ -23,12 +21,6 @@ export function ProductSearchBar({
           </div>
         )}
       </div>
-      <Checkbox
-        id="stocked"
-        checked={showStockedOnly}
-        onChange={(value) => onStockedOnlyChange(value)}
-        label="Afficher les produits en stock"
-      />
     </form>
   )
 }

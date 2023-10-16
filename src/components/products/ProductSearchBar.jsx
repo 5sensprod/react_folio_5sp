@@ -1,6 +1,12 @@
-import { Checkbox } from '../forms/Checkbox'
-import { Input } from '../forms/Input'
-import { SubmitButton } from '../forms/SubmitButton'
+import React from 'react'
+import {
+  Form,
+  InputGroup,
+  FormControl,
+  Button,
+  FormCheck,
+} from 'react-bootstrap'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 export function ProductSearchBar({
   search,
@@ -10,25 +16,30 @@ export function ProductSearchBar({
   useSubmitButton = true,
 }) {
   return (
-    <form>
-      <div className="mb-3 input-group">
-        <Input
+    <Form>
+      <InputGroup className="mb-3">
+        <FormControl
           value={search}
-          onChange={onSearchChange}
+          onChange={(e) => onSearchChange(e.target.value)}
           placeholder="Rechercher ..."
+          aria-label="Recherche produit"
         />
         {useSubmitButton && (
-          <div className="input-group-append">
-            <SubmitButton label="Rechercher" iconName="bi-search" />
-          </div>
+          <InputGroup.Append>
+            <Button variant="primary" type="submit">
+              <i className="bi bi-search"></i> Rechercher
+            </Button>
+          </InputGroup.Append>
         )}
-      </div>
-      <Checkbox
+      </InputGroup>
+
+      <FormCheck
+        type="checkbox"
         id="stocked"
         checked={showStockedOnly}
-        onChange={(value) => onStockedOnlyChange(value)}
+        onChange={(e) => onStockedOnlyChange(e.target.checked)}
         label="Afficher les produits en stock"
       />
-    </form>
+    </Form>
   )
 }

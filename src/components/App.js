@@ -5,6 +5,7 @@ import { removeAccents } from '../utils/stringHelpers'
 import { PageTitle } from './common/PageTitle'
 import Weather from './weather/Weather'
 import { ProductSearchBar } from './products/ProductSearchBar'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   const [showStockedOnly, setShowStockedOnly] = useState(false)

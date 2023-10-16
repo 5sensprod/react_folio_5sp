@@ -1,26 +1,23 @@
-import { Input } from '../forms/Input'
-import { SubmitButton } from '../forms/SubmitButton'
+import React from 'react'
+import { Form, InputGroup, FormControl, Button } from 'react-bootstrap'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
-export function WeatherSearchBar({
-  search,
-  onSearchChange,
-  onSubmit,
-  useSubmitButton = true,
-}) {
+export function WeatherSearchBar({ search, onSearchChange, onSubmit }) {
   return (
-    <form onSubmit={onSubmit}>
-      <div className="mb-3 input-group">
-        <Input
+    <Form onSubmit={onSubmit}>
+      <InputGroup className="mb-3">
+        <FormControl
+          type="text"
           value={search}
-          onChange={onSearchChange}
+          onChange={(e) => onSearchChange(e.target.value)}
           placeholder="Rechercher ..."
+          aria-label="Recherche météo"
+          aria-describedby="weather-addon"
         />
-        {useSubmitButton && (
-          <div className="input-group-append">
-            <SubmitButton label="Rechercher" iconName="bi-search" />
-          </div>
-        )}
-      </div>
-    </form>
+        <Button variant="outline-success" type="submit">
+          <i className="bi bi-search"></i>
+        </Button>
+      </InputGroup>
+    </Form>
   )
 }

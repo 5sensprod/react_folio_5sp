@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/react_folio_5sp/static/css/main.430f763a.css",
-    "main.js": "/react_folio_5sp/static/js/main.936c9ead.js",
+    "main.css": "/react_folio_5sp/static/css/main.fea4aa43.css",
+    "main.js": "/react_folio_5sp/static/js/main.af707f1c.js",
+    "static/media/bootstrap-icons.woff?": "/react_folio_5sp/static/media/bootstrap-icons.449ad8adf6ae0424b7ed.woff",
+    "static/media/bootstrap-icons.woff2?": "/react_folio_5sp/static/media/bootstrap-icons.dea24bf5a7646d8b84e7.woff2",
     "index.html": "/react_folio_5sp/index.html",
-    "main.430f763a.css.map": "/react_folio_5sp/static/css/main.430f763a.css.map",
-    "main.936c9ead.js.map": "/react_folio_5sp/static/js/main.936c9ead.js.map"
+    "main.fea4aa43.css.map": "/react_folio_5sp/static/css/main.fea4aa43.css.map",
+    "main.af707f1c.js.map": "/react_folio_5sp/static/js/main.af707f1c.js.map"
   },
   "entrypoints": [
-    "static/css/main.430f763a.css",
-    "static/js/main.936c9ead.js"
+    "static/css/main.fea4aa43.css",
+    "static/js/main.af707f1c.js"
   ]
 }

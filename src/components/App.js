@@ -30,9 +30,9 @@ function App() {
         onSearchChange={setSearch}
         showStockedOnly={showStockedOnly}
         onStockedOnlyChange={setShowStockedOnly}
-        useSubmitButton={false}
       />
       <ProductTable products={visibleProducts} />
+      <PageTitle title="Composant météo" />
       <Weather />
     </div>
   )

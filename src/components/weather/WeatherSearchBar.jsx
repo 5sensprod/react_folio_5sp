@@ -13,8 +13,9 @@ export function WeatherSearchBar({ search, onSearchChange, onSubmit }) {
           placeholder="Rechercher ..."
           aria-label="Recherche météo"
           aria-describedby="weather-addon"
+          className="bg-dark text-white"
         />
-        <Button variant="outline-success" type="submit">
+        <Button type="submit" variant="dark">
           <i className="bi bi-search"></i>
         </Button>
       </InputGroup>

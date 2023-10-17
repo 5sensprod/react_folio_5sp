@@ -1,0 +1,19 @@
+$primary: #524ac7;
+// Couleurs basées sur l'image fournie
+$dark: #2C2F58;
+$medium-dark: #4B5175;
+$medium: #807CA0;
+$medium-light: #B8A9BB;
+$light: #FFFFFF;
+
+// Application des couleurs à Bootstrap
+$theme-colors: (
+  "primary": $dark,
+  "secondary": $medium-dark,
+  "info": $medium,
+  "light": $medium-light,
+  "dark": $light
+);
+
+// Importer les styles par défaut de Bootstrap
+@import "~bootstrap/scss/bootstrap";

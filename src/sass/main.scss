@@ -1,0 +1,39 @@
+// main.scss
+
+@import "./variables";
+
+// Surcharger les variables Bootstrap
+$theme-colors: (
+  "primary": $primary-color
+);
+
+// Importez les styles Bootstrap APRES les surcharges
+@import "~bootstrap/scss/bootstrap";
+
+// Application des couleurs
+body {
+  background-color: $dark-background;
+  color: $text-color;
+}
+
+.container, .card, .modal, .alert, .list-group-item {
+  background-color: $lighter-background;
+}
+
+a {
+  color: $primary-color;
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
+
+button {
+  background-color: $primary-color;
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.text-secondary {
+  color: $secondary-text-color !important;
+}
